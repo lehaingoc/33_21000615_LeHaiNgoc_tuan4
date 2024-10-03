@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập / Đăng Ký</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <style>
+        .carousel-inner {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .noidung {
+            font-size: 12px;
+        }
+        .noidung2 {
+            text-align: center;
+            font-size: 13px;
+        }
+        .btn-primary {
+            width: 100%;
+            background-color: #FFA500; /* Màu cam */
+            border: none;
+            color: white;
+        }
+
+        /* Thay đổi màu khi di chuột vào nút */
+        .btn-primary:hover {
+            background-color: #FF8000; /* Màu cam nhạt khi hover */
+        }
+
+        /* Làm chữ trong dropdown in đậm */
+        select.form-control {
+            font-weight: bold;
+        }
+
+        /* CSS để căn giữa văn bản trong div modal-footer */
+        .modal-footer {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy',
+                autoclose: true
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- Button to trigger the modal -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#registrationModal">
+    MODAL
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">ĐĂNG NHẬP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false" style="color: #FFA500;">ĐĂNG KÝ</a>
+                    </li>
+                </ul>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <div class="tab-content" id="myTabContent">
+                    <!--Tab đăng nhập -->
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <!-- Login Form Here -->
+                        <div class="noidung"> 
+                            <p>Vui lòng đăng nhập trước khi mua để tích lũy điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên Galaxy Cinema.</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email ">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                        <button type="button" class="btn btn-primary">Đăng Nhập</button>
+                    </div>
+                    <!-- Tab đăng ký -->
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <!-- Registration Form Here -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Họ Tên">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Số điện thoại">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option><b>Chọn giới tính</b></option>
+                                        <option>Nam</option>
+                                        <option>Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Mật khẩu">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Xác nhận mật khẩu">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option><b>Chọn thành phố</b> </option>
+                                        <option>Thành phố Tuy Hòa</option>
+                                        <option>Thành phố Hồ Chí Minh</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option><b>Chọn quận</b> </option>
+                                        <option>Quận Gò Vấp</option>
+                                        <option>Quận Bình Tân</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Địa chỉ">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control datepicker" placeholder="Ngày (dd/mm/yyyy)">
+                        </div>
+                
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="../img/bai3/captcha.png" alt="Captcha Image">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nhập Mã Captcha">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <p>Tôi đã đọc và đồng ý với <b style="color: #FF8000;">CHÍNH SÁCH</b> của chương trình  </p>
+                        </div>
+                        <div class="modal-footer text-center"> <!-- Sử dụng lớp "text-center" để canh giữa văn bản -->
+                            <button type="button" class="btn btn-primary">Đăng Ký</button>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+</body>
+</html>

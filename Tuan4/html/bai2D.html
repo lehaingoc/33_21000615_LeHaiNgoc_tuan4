@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Registration Form</title>
+    <style>
+        .container {
+            border: 1px solid; 
+            height: 300px;
+            width: 700px;
+        }
+    </style>
+    
+    <script>
+        const registrationForm = document.getElementById('registrationForm');
+        registrationForm.addEventListener('submit', function (event) {
+            if (!registrationForm.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            registrationForm.classList.add('was-validated');
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="registrationForm">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                </div>
+            </div> <br>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter city" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" name="state" placeholder="Enter state" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Enter zip" required>
+                </div>
+                
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
+                <label class="form-check-label" for="agree">Agree to terms and conditions</label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit form</button>
+        </form>
+    </div>
+    
+</body>
+</html>

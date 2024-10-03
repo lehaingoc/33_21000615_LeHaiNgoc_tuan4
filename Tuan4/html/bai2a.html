@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <style>
+    .container {
+      border: 1px solid rgb(105, 143, 225); 
+      height: 650px;
+    }
+  </style>
+  <title>Form Payment</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Checkout</h2>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Product 1</b><br><small>Lorem ipsum dolor sit amet</small></td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td><b>Product 2</b><br><small>Lorem ipsum dolor sit amet</small></td>
+          <td>$120</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><b>Total</b> </td>
+          <td>$320</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr>
+
+    <h3>Credit Card Details</h3>
+
+    <form>
+      <div class="form-group">
+        <div class="d-flex justify-content-between">
+          <div class="col-7">
+            <label for="cardHolder">CARD HOLDER</label>
+            <input type="text" class="form-control" id="cardHolder" placeholder="Card Holder">
+          </div>
+          <div class="col-4">
+            <label for="mm">EXPIRATION DATE</label>
+            <div class="d-flex">
+              <select class="form-control" id="mm" name="mm">
+                <option value="">MM</option>
+                
+                
+              </select>
+              <div class="col-1">
+                <label>/</label>
+              </div>
+              <select class="form-control" id="yy" name="yy">
+                <option value="">YY</option>
+               
+                
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group d-flex justify-content-between">
+        <div class="col-8 custom-spacing">
+          <label for="cardNumber">CARD NUMBER</label>
+          <input type="text" class="form-control" id="cardNumber" placeholder="Card number">
+        </div>
+        <div class="col-4 custom-spacing">
+          <label for="cvc">CVC</label>
+          <input type="text" class="form-control" id="cvc" placeholder="CVC">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block">Proceed</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Facebook Registration</title>
+    <style>
+        .container {
+            border: 1px solid rgb(105, 143, 225); 
+            height: 500px;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Left Column -->
+                <form>
+                    <div class="mb-3">
+                        <label for="username">Username*</label>
+                        <input type="text" class="form-control" id="username" placeholder="Choose your username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">E-mail*</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your current email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Password*</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create a password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullname">Full Name*</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="Your Frist name and last name">
+                    </div>
+                    <div class="mb-3">
+                        <label>Gender*</label> <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-md-6">
+                <!-- Right Column -->
+                <form>
+                    <div class="mb-3">
+                        <label for="companyname">Company Name*</label>
+                        <input type="text" class="form-control" id="companyname" placeholder="your company name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="category">Category*</label>
+                        <input type="text" class="form-control" id="category" placeholder="skills category">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactnumber">Contact Number*</label>
+                        <input type="text" class="form-control" id="contactnumber" placeholder="provide your number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location">Your Location*</label>
+                        <input type="text" class="form-control" id="location" placeholder="Your Pincode and city">
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="terms" class="form-check-input">
+                        <label for="terms" class="form-check-label">Agree with the terms and conditions</label>
+                    </div> <br>
+                    <button type="submit" class="btn btn-primary" style="background-color: rgb(23, 177, 126);">Signup</button> Or
+                    <button type="submit" class="btn btn-primary">Signup with Facebook</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
